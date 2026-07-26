@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0b0f19;
+    --bg-card: #0f172a;
+    --bg-subtle: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #1e293b;
+  }
+
+  html.light {
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-subtle: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #cbd5e1;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Comprehensive Light Mode Accessibility & Styling Overrides */
+  html.light .bg-\[\#0b0f19\] {
+    background-color: #f8fafc !important;
+  }
+
+  html.light .bg-\[\#0f172a\] {
+    background-color: #ffffff !important;
+  }
+
+  html.light .bg-slate-800,
+  html.light .bg-slate-800\/80,
+  html.light .bg-slate-800\/50,
+  html.light .bg-slate-800\/30,
+  html.light .bg-slate-900,
+  html.light .bg-slate-900\/80,
+  html.light .bg-slate-900\/90,
+  html.light .bg-slate-950,
+  html.light .bg-slate-950\/40,
+  html.light .bg-slate-950\/80,
+  html.light .bg-slate-950\/90 {
+    background-color: #f1f5f9 !important;
+  }
+
+  html.light .border-slate-800,
+  html.light .border-slate-800\/80,
+  html.light .border-slate-800\/60,
+  html.light .border-slate-800\/40,
+  html.light .border-slate-700 {
+    border-color: #cbd5e1 !important;
+  }
+
+  html.light .text-slate-100,
+  html.light .text-slate-200,
+  html.light .text-white {
+    color: #0f172a !important;
+  }
+
+  html.light .text-slate-300,
+  html.light .text-slate-400 {
+    color: #334155 !important;
+  }
+
+  html.light .text-slate-500 {
+    color: #64748b !important;
+  }
+
+  /* Light mode sky blue text contrast enhancement */
+  html.light .text-sky-400 {
+    color: #0284c7 !important;
+  }
+
+  html.light .text-emerald-400 {
+    color: #059669 !important;
+  }
+
+  html.light .text-amber-400 {
+    color: #d97706 !important;
+  }
+
+  html.light .text-rose-400 {
+    color: #e11d48 !important;
+  }
+
+  /* Skill Pills & Tag styling in light mode */
+  html.light .bg-slate-800.text-slate-300 {
+    background-color: #e2e8f0 !important;
+    color: #1e293b !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  /* Gradient Banner CTA Override in Light Mode */
+  html.light .bg-gradient-to-r.from-sky-950\/80,
+  html.light .bg-gradient-to-br.from-slate-900 {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f1f5f9 50%, #e0e7ff 100%) !important;
+    border-color: #bae6fd !important;
+  }
+
+  html.light .bg-sky-950\/40 {
+    background-color: #f0f9ff !important;
+  }
+
+  html.light .bg-emerald-950\/40 {
+    background-color: #ecfdf5 !important;
+  }
+
+  html.light .bg-amber-950\/40 {
+    background-color: #fffbeb !important;
+  }
+
+  html.light .bg-rose-950\/40 {
+    background-color: #fff1f2 !important;
+  }
+
+  /* Form controls in light mode */
+  html.light input:not([type="checkbox"]):not([type="radio"]),
+  html.light textarea,
+  html.light select {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  html.light input::placeholder,
+  html.light textarea::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  /* Code blocks & Pre in light mode */
+  html.light code,
+  html.light pre {
+    background-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+}
+
+/* Printer-Friendly CSS Rules */
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print,
+  button:not(.print-keep) {
+    display: none !important;
+  }
+
+  body,
+  html,
+  #root {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Reset dark container backgrounds for clean printing */
+  .bg-slate-900\/80,
+  .bg-slate-900,
+  .bg-slate-950,
+  .bg-\[\#0f172a\],
+  .bg-\[\#0b0f19\],
+  .bg-slate-800 {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+  }
+
+  .text-slate-100,
+  .text-slate-200,
+  .text-slate-300,
+  .text-slate-400,
+  .text-slate-500 {
+    color: #1e293b !important;
+  }
+
+  .text-sky-400 {
+    color: #0284c7 !important;
+  }
+
+  .text-emerald-400 {
+    color: #059669 !important;
+  }
+
+  .text-amber-400 {
+    color: #d97706 !important;
+  }
+
+  .text-purple-400 {
+    color: #7c3aed !important;
+  }
+
+  /* Prevent awkward page breaks */
+  .grid,
+  .print-break-inside-avoid,
+  table,
+  tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Fix Recharts SVG chart collapse during window.print() */
+  .recharts-responsive-container,
+  .recharts-wrapper {
+    height: 300px !important;
+    min-height: 300px !important;
+    width: 100% !important;
+  }
+
+  .recharts-surface {
+    overflow: visible !important;
+  }
+
+  .border {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Ensure print report modal expands to full printed page */
+  .print-modal-container {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+

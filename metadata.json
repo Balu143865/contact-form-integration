@@ -1,0 +1,6 @@
+{
+  "name": "Enhance Contact Form - Freelancer Project & Demo",
+  "description": "Full-stack contact form solution with Node.js Express backend API, input sanitization, honeypot spam protection, live email log simulator, and developer hand-off guide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
